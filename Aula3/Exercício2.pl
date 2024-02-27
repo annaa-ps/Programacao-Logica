@@ -1,5 +1,5 @@
 %BASE DE CONHECIMENTO
-%matéria que estuda
+%aluno + matéria que estuda
 estuda(fabricio, programação).
 estuda(joana, lógica).
 estuda(ana, tcc). 
@@ -9,7 +9,7 @@ estuda(nicolas, lógica).
 estuda(fernanda, tcc).
 estuda(maria, tcc).
 
-%aluno e faculdade
+%aluno + faculdade que estuda
 aluno(fabricio, ufmg).
 aluno(joana, ufu).
 aluno(ana, ufu).
@@ -19,20 +19,23 @@ aluno(nicolas, ufu).
 aluno(fernanda, ufu).
 aluno(maria, ufu).
 
-%professor e matéria
+%professor + matéria que leciona 
 professor(joão, programação).
 professor(clara, lógica).
 professor(roberta, tcc).
 professor(antonio, banco).
 professor(leandro, estrutura).
 
-%reitor e faculdade
+%reitor + faculdade 
 reitor(beatriz, ufmg).
 reitor(marcos, ufu).
 
-%curso e matéria que oferta
+%curso + matéria que o curso1 oferta
 oferta(bcc, programação).
 oferta(bcc, lógica).
+oferta(si, tcc).
+oferta(si, banco).
+oferta(bcc, estrutura).
 
 %REGRAS 
 %Regra 1
@@ -55,8 +58,6 @@ professor_universidade(X,Y):-professor(X,Z), estuda(A,Z), aluno(A,Y).
 
 %Regra 7 
 disciplinas_universidade(X,Y):-estuda(A,X), aluno(A,Y).
-oferta(si, tcc).
-oferta(si, banco).
-oferta(bcc, estrutura).
 
-%REGRAS 
+%Regra 8 
+reitor_professor(X,Y):-
