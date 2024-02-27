@@ -60,4 +60,4 @@ professor_universidade(X,Y):-professor(X,Z), estuda(A,Z), aluno(A,Y).
 disciplinas_universidade(X,Y):-estuda(A,X), aluno(A,Y).
 
 %Regra 8 
-reitor_professor(X,Y):-
+reitor_professor(X,Y):-professor_universidade(Y,Z), reitor(X,Z). 
