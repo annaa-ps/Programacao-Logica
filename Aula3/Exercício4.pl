@@ -22,5 +22,12 @@ livro('oxe, baby',2021,'elayne baeta').
 livro('dias perfeitos',2014,'raphael montes').
 
 %REGRAS
-
 ano_livro(Titulo,Ano):-livro(Titulo,Ano,_).
+
+livros_antes_do_ano(Ano, Livro, Autor):-livro(Livro, AnoLivro, Autor), AnoLivro < Ano.
+
+livros_entreData(Ano, Livro):-livro(Livro, AnoLivro, _),AnoLivro >= 2015,AnoLivro =< 2023,AnoLivro = Ano.
+
+livro_dadoAno(Ano, Titulo):-livro(Titulo,AnoPublicado,_), AnoPublicado == Ano.  
+
+livro_autor(Autor, Titulo):-livro(Titulo,_,AutorLivro), AutorLivro == Autor. 
