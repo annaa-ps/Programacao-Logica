@@ -22,5 +22,5 @@ livro('oxe, baby',2021,'elayne baeta').
 livro('dias perfeitos',2014,'raphael montes').
 
 %REGRAS
-%Livros de um determinado autor
-livros_autor(Autor, [Titulo | OutrosLivros]):-livro(Titulo,_,Autor), livros_autor(Autor, OutrosLivros). 
+
+ano_livro(Titulo,Ano):-livro(Titulo,Ano,_).
