@@ -10,11 +10,11 @@ filme('Carrington', romance, 1995, 130).
 lançados_d1980(A,F):-filme(F,_,A,_),
                      A > 1980. 
 
-duração_entre(F):-filme(F,_,_,T), 
-    				T >= 100,
-    				T =< 140. 
+duração_entre(F):-filme(F,_,_,T),
+                  T >= 100,
+                  T =< 140. 
 
 filmes_romance(F):-filme(F,G,_,_),
-    				G == 'romance'. 
+                   G == 'romance'. 
 
 filmes_locadora(F):-filme(F,_,_,_). 
