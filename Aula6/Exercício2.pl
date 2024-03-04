@@ -7,8 +7,8 @@ filme('E o vento levou', drama, 1939, 233).
 filme('Carrington', romance, 1995, 130).
 
 %Regras:
-lançados_d1980(A,F):-filme(F,_,A,_), 
-    				A > 1980. 
+lançados_d1980(A,F):-filme(F,_,A,_),
+                     A > 1980. 
 
 duração_entre(F):-filme(F,_,_,T), 
     				T >= 100,
