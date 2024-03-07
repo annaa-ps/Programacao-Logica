@@ -38,3 +38,5 @@ avô(X,Y):-homem(X), pai(X,Z), pai(Z,Y).
 avô(X,Y):-homem(X), pai(X,Z), mae(Z,Y).
 avó(X,Y):-mulher(X), mae(X,Z), mae(Z,Y). 
 avó(X,Y):-mulher(X), mae(X,Z), pai(Z,Y). 
+
+tio(X,Y):-homem(X), irmao(X,Z), pai(Z,Y);homem(X), irmao(X,Z), mae(Z,Y).
