@@ -13,6 +13,7 @@ distancia(b,e,25).
 distancia(b,f,25).
 distancia(d,e,5).
 distancia(c,f,5).
+distancia(a,c,10). 
 
 %Caso Base: se a origem e o destino forem iguais, o custo é zero
 custo_caminho(Origem,Origem,0). 
