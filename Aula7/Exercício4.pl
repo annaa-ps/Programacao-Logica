@@ -9,6 +9,6 @@ soma_valores(1,1).
 
 %Caso recursivo: 
 soma_valores(N, S):- N > 1, 
-    				 N1 is N - 1, 
-    				 soma_valores(N1,Soma), 
-    				 S is Soma + N.  
+                     N1 is N - 1,
+                     soma_valores(N1,Soma), 
+                     S is Soma + N.  
