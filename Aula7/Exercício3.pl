@@ -5,9 +5,9 @@
 mdc(X,0,X).  
 
 %
-mdc(X, Y, Z):- Y > 0, 
-    		   Y2 is X mod Y, 
-    		   mdc(Y,Y2,Z). 
+mdc(X, Y, Z):- Y > 0,
+	       Y2 is X mod Y,
+	       mdc(Y,Y2,Z). 
 
     
 			
