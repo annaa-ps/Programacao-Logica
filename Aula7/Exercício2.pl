@@ -19,5 +19,5 @@ custo_caminho(Origem,Origem,0).
 
 %Caso recursivo: calcular o custo total do caminho
 custo_caminho(Origem,Destino,Custo):- distacia(Origem, Proximo, Distancia),
-    							custo_caminho(Proximo, Destino, CustoRestante), 
-    					    	 Custo is Distancia + CustoRestante. 
+                                      custo_caminho(Proximo, Destino, CustoRestante), 
+                                      Custo is Distancia + CustoRestante. 
