@@ -4,7 +4,7 @@
 %Caso Base: Quando temos um determinado valor fazendo MDC com ZERO, o resultado será ele mesmo
 mdc(X,0,X).  
 
-%
+%Caso Recursivo: 
 mdc(X, Y, Z):- Y > 0,
 	       Y2 is X mod Y,
 	       mdc(Y,Y2,Z). 
