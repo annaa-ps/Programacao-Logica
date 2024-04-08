@@ -19,3 +19,12 @@ deAviao( aoPaulo, rioJaneiro).
 deAviao(monteAlegre, bh).
 deAviao(recife, maceio).
 deAviao(bh, unai).
+
+%Caso Base: 
+viagem(Origem, Destino):-deCarro(Origem, Destino). 
+viagem(Origem, Destino):-deTrem(Origem, Destino). 
+viagem(Origem, Destino):-deAviao(Origem, Destino). 
+
+%Caso Recursivo:
+viagem(Origem, Destino):- (deCarro(Origem,Aux); deTrem(Origem,Aux);deAviao(Origem,Aux)), 
+                          viagem(Aux,Destino). 
